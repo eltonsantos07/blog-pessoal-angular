@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
 
 import { UserLogin } from '../model/UserLogin';
@@ -16,6 +17,7 @@ export class AuthService {
 
   entrar(userLogin: UserLogin): Observable<UserLogin>{
     return this.http.post<UserLogin>('https://backendthiagofaccipieri.herokuapp.com/usuarios/logar', userLogin)
+    
     //return this.http.post<UserLogin>('https://meublogpessoal.herokuapp.com/usuarios/logar', userLogin)
   }
 
@@ -23,5 +25,21 @@ export class AuthService {
     return this.http.post<User>('https://backendthiagofaccipieri.herokuapp.com/usuarios/cadastrar', user)
 
     //return this.http.post<User>('https://meublogpessoal.herokuapp.com/usuarios/cadastrar', user)
+  }
+
+  /**
+   * verificar se o token não é vazio para certificar que o ususario está logado
+   * 
+   * verificar se o token não é vazio para certificar que o ususario está logado
+   * */ 
+  //método usado para mostrar componentes na tela apenas quando o usuario estiver logado
+  logado(){
+
+    let ok: boolean = false
+
+    if(environment.token != ''){
+      ok = true
+    }
+    return ok
   }
 }

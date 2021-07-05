@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -28,7 +29,12 @@ import { InicioComponent } from './inicio/inicio.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//Os objetos criados no providers servem para que a página não quebre quando criamos rotas dentro da mesma página (as âncoras feitas com Id)

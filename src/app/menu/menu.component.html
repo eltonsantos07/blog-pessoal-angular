@@ -6,10 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto d-flex align-items-center">
         <li class="nav-item active">
-            <img src="http://static1.squarespace.com/static/5aa74e0a506fbe5eef56c5c7/5b71be6c562fa726911dfab8/5b71f48921c67c3f307ab2d8/1534365021636/001+Bulbasaur.png?format=1500w" alt="Foto do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
+            <img src="{{foto}}" alt="Foto do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
         </li>
         <li class="nav-item p-3">
-          <p class="m-0 font-weight-bold text-white fs-16">Nome do usuário</p>
+          <p class="m-0 font-weight-bold text-white fs-16">Olá, {{nome}}</p>
         </li>
         <li>
             <a href="">
@@ -21,7 +21,7 @@
       </ul>
       
       <ul class="navbar-nav ml-auto d-flex align-items-center">
-        <a href="" class="m-0 font-weight-bold text-white fs-16">Sair <i class="fas fa-sign-out-alt"></i></a>
+        <a (click)='sair()' href="" class="m-0 font-weight-bold text-white fs-16">Sair <i class="fas fa-sign-out-alt"></i></a>
       </ul>
     </div>
   </nav>
