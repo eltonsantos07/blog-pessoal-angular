@@ -31,6 +31,14 @@ export class AuthService {
     //return this.http.post<User>('http://localhost:8080/usuarios/cadastrar', user)
   }
 
+  atualizar(user: User): Observable<User>{
+    //return this.http.put<User>('https://backendthiagofaccipieri.herokuapp.com/usuarios/cadastrar', user)
+
+    return this.http.put<User>('https://meublogpessoal.herokuapp.com/usuarios', user)
+
+    //return this.http.put<User>('http://localhost:8080/usuarios/cadastrar', user)
+  }
+
   getByIdUser(id: number): Observable<User>{
     return this.http.get<User>(`https://meublogpessoal.herokuapp.com/usuarios/${id}`)
 
