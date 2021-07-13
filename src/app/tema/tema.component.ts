@@ -28,6 +28,13 @@ export class TemaComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
+    //Alerta usado caso o link 'adicione um tema novo'estivesse visível para todos os usuários
+    
+    /*if(environment.tipo != 'adm'){
+      this.alertas.showAlertInfo('Apenas administradores tem acesso a esta rota')
+      this.router.navigate(['/inicio'])
+    }*/
+
     this.findAllTemas()
   }
 

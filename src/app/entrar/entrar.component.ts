@@ -31,7 +31,8 @@ userLogin: UserLogin = new UserLogin()
       environment.id = this.userLogin.id,
       environment.nome = this.userLogin.nome,
       environment.token = this.userLogin.token,
-      environment.foto = this.userLogin.foto
+      environment.foto = this.userLogin.foto,
+      environment.tipo = this.userLogin.tipo
 
 
       this.router.navigate(['/inicio'])
