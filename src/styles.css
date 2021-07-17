@@ -11,3 +11,17 @@ html{
 .fs-18{
     font-size: 18pt;
 }
+
+h1{
+    color: black;
+}
+
+
+
+.bg-blue{
+    background-color: #89CCD3;
+}
+
+.bg-page{
+    background-color: #dcdcdc55;
+}

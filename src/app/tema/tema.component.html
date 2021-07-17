@@ -1,9 +1,9 @@
 <div class="container-fluid">
 
-    <div class="row bg-dark">
-        <div class="col-md-12 text-white">
+    <div class="row bg-blue">
+        <div class="col-md-12 ">
 
-            <a routerLink="/inicio" class="text-white text-left">
+            <a routerLink="/inicio" class="text-left">
                 <i class="fas fa-angle-double-left"></i> Início
             </a>
 
@@ -49,7 +49,8 @@
                 </thead>
 
                 <tbody>
-                    <tr *ngFor='let i of listaTemas'><!--Este i é uma variável de iteração no laço For, poderiamos dar outro nome-->
+                    <tr *ngFor='let i of listaTemas'>
+                        <!--Este i é uma variável de iteração no laço For, poderiamos dar outro nome-->
                         <th>{{i.id}}</th>
                         <td>{{i.descricao}}</td>
                         <td class="d-flex justify-content-end">

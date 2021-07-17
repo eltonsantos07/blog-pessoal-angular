@@ -12,7 +12,7 @@ ul.social-network li{
 /*Estilizando os icones (fab é uma classe que está nos icones)*/
 .fab{
     font-size: 35pt;
-    color: white;
+    color: #807e7e;
     padding: 10px;
 }
 

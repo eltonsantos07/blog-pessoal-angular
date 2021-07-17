@@ -1,27 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto d-flex align-items-center">
-        <li class="nav-item active">
-            <img src="{{foto}}" alt="Foto do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
-        </li>
-        <li class="nav-item p-3">
-          <p class="m-0 font-weight-bold text-white fs-16">Olá, {{nome}}</p>
-        </li>
-        <li *ngIf='auth.adm()' class="nav-item pl-3">
-            <a [routerLink]="['/user-edit', id]">
-                <p class="m-0 text-white fs-16">
-                  <i class="far fa-edit"></i>
-                </p>
-            </a>
-        </li>
-      </ul>
-      
-      <ul class="navbar-nav ml-auto d-flex align-items-center">
-        <a (click)='sair()' href="" class="m-0 font-weight-bold text-white fs-16">Sair <i class="fas fa-sign-out-alt"></i></a>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-blue">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <li class="nav-item active">
+        <img src="{{foto}}" alt="Foto do usuário" width="50px" height="50px" class="img-fluid rounded-circle">
+      </li>
+      <li class="nav-item p-3">
+        <p class="m-0 font-weight-bold fs-16">Olá, {{nome}}</p>
+      </li>
+      <li *ngIf='auth.adm()' class="nav-item pl-3">
+        <a [routerLink]="['/user-edit', id]">
+          <p class="m-0 fs-16">
+            <i class="far fa-edit"></i>
+          </p>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <a (click)='sair()' href="" class="m-0 font-weight-bold fs-16">Sair <i class="fas fa-sign-out-alt"></i></a>
+    </ul>
+  </div>
+</nav>
